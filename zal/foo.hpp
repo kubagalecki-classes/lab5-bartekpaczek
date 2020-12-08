@@ -13,9 +13,9 @@ std::vector< char > foo(std::list< Human >& people)
         it->birthday();
         
         if(it->isMonster()){
-            lubi.push_back('y');
+            lubi.push_back('n');
         }else{
-           lubi.push_back('n');
+           lubi.push_back('y');
         }
         
     };
