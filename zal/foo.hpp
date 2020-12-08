@@ -8,8 +8,8 @@
 std::vector< char > foo(std::list< Human >& people)
 {   
     std::vector< char > lubi;
-    std::list<Human>::reverse_iterator it;
-    for(it;it<people.rbegin();it++){
+    std::list<Human>::reverse_iterator it = people.rbegin();
+    for(it;it<people.rend();it++){
         *it.birthday();
         if(*it.isMonster()){
             lubi.push_back('y');
@@ -19,5 +19,5 @@ std::vector< char > foo(std::list< Human >& people)
         }
         
     };
-
+    return lubi;
 }
