@@ -7,14 +7,14 @@
 
 std::vector< char > foo(std::list< Human >& people)
 {   
-    std::vector< char > lubi;
-    std::list<Human>::reverse_iterator it = people.rbegin();
-    for(it;it<people.rend();it++){
-        *it.birthday();
-        if(*it.isMonster()){
+       std::vector< char > lubi;
+    auto it = people.rbegin();
+    for(it; it!=people.rend(); ++it){
+        it->birthday();
+        
+        if(it->isMonster()){
             lubi.push_back('y');
-        }else
-        {
+        }else{
            lubi.push_back('n');
         }
         
